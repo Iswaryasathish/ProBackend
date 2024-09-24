@@ -12,7 +12,11 @@ connectDB();
 
 app.use(express.json());
 app.use(cors(
-  
+  {
+  origin: 'https://iswaryasathishaakarshika.netlify.app', // Allow your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
+  credentials: true // Allow cookies if needed
+}
 ));
 app.use(bodyParser.json());
 
